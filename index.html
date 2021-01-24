@@ -6,111 +6,211 @@
   </head>
   <body>
     <h1>這是一個測試網頁。</h1>
-    
-body{
-  position:relative;
-  width:100;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  perspective:10000px;
-  background:#222;
-  .wrap{
-    width:30px;
-    height:2300px;
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform-style:preserve-3d;
-    transform:translateX(-50%) translateY(-50%);
-    @for $i from 1 through 20{
-      &:nth-of-type(#{$i}){
-        width:calc(300px - #{$i * 20}px);
-        height:calc(300px - #{$i * 20}px);
-        .cube{
-          animation:cubespin 10s ease-in-out infinite;
-          animation-delay:#{$i / -10}s;
-          @keyframes cubespin{
-            0%{
-              transform:rotateX(25deg) rotateY(25deg);
-            }
-            50%{
-              transform:rotateX(25deg) rotateY(25deg);
-            }
-            100%{
-              transform:rotateX(205deg) rotateY(-205deg);
-            }
-          }
-          .face{
-            width:calc(300px - #{$i * 20}px);
-            height:calc(300px - #{$i * 20}px);
-            box-shadow:inset 0 0 2px 2px adjust-hue(pink, ($i/20)*360);
-            &:nth-of-type(1){ 
-            //front
-            transform: rotateY(   0deg ) translateZ( calc(150px - #{$i * 5}px) );
-            }
-          &:nth-of-type(2){ 
-            //back
-            transform: rotateX( 180deg ) translateZ( calc(150px - #{$i * 5}px) ); }
-          &:nth-of-type(3){ 
-            //right
-            transform: rotateY(  90deg ) translateZ( calc(150px - #{$i * 5}px) ); }
-          &:nth-of-type(4){ 
-            //left
-            transform: rotateY( -90deg ) translateZ( calc(150px - #{$i * 5}px) ); }
-          &:nth-of-type(5){ 
-            //top
-            transform: rotateX(  90deg ) translateZ( calc(150px - #{$i * 5}px) ); }
-          &:nth-of-type(6){ 
-            //bottom
-            transform: rotateX( -90deg ) translateZ( calc(150px - #{$i * 5}px) ); }
-    
-            
-          }
-        }
-      }
-    }
-    .cube {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      transform-style: preserve-3d;
-
-      .face{
-          margin: 0;
-          width: 200px;
-          height: 200px;
-          display: block;
-          position: absolute;
-          &:nth-of-type(1){ 
-            //front
-            transform: rotateY(   0deg ) translateZ( 100px );
-            }
-          &:nth-of-type(2){ 
-            //back
-            transform: rotateX( 180deg ) translateZ( 100px ); }
-          &:nth-of-type(3){ 
-            //right
-            transform: rotateY(  90deg ) translateZ( 100px ); }
-          &:nth-of-type(4){ 
-            //left
-            transform: rotateY( -90deg ) translateZ( 100px ); }
-          &:nth-of-type(5){ 
-            //top
-            transform: rotateX(  90deg ) translateZ( 100px ); }
-          &:nth-of-type(6){ 
-            //bottom
-            transform: rotateX( -90deg ) translateZ( 100px ); }
-      }
-    }
-  
-  }
-  
-  
-}
-
-
   </body>
+
+<div class="resume">
+  <div class="left"><img class="namePic" src="https://lh3.googleusercontent.com/e5d0CZsrUEYUrxyGb_iY8Y84rLH9FnF0DCjb6BoPfdJ77gD_IX9B7vLDOISWFy8Ifn3LA-YSBTIEhnOpJHbjYldmHM1DlBPY9le3xv-dYPkbLCjhjMFHS4bmejMuytzlOIHKhwWTjkHN44tCT_2TcjxDmm4W733jrIb-Sw3Ljfy56-etfQclEMNY_dKhROGDbBDacPdplArbRSGFAB6gSVSenRWbSQ8SHCrYjB4KqqNrkGH6xGgMUU4nh99tfIq-dOinmosxODpd5aX7QFDGHcPta4wnIR-YhkGAOfj5pkCr5tYF6ta1l5YOgnPXqzFAxdqhr_YBAZ_U9B-gGUuoS9g_57HpcEPnEK4HAOdBc4MUY01s7nnB5yjIrhWd4wO4F108F_s5jNJ0ofmDNvSMenHTpGWjQNyqcLAssvyWno4B3YbpKqc2FF4gG-mFTmnLtVuZLPWxBa8yT-g7lciBmRMqRhlrx1Ew8DV_H3_H6ReT-FNQnKDRTdppPjM6KBmNS0-rXyyz4CvRXUOfQ_TYj3l89CFS3wWqiFmmi2OgmZmv23Zdt2TIgZP2u7-zFdeIkr6hqep9qHlYVIzAvmbX7n_hoBuIKFJyKKRn_3Qklw=w276-h414-no" alt=""/>
+    <h1>陳智遠</h1>
+    <h2>程式設計師</h2>
+    <p>我是陳智遠，曾在資策會數位教育研究所，JAVA雲端服務技術養成班參加訓練，已掌握JAVA相關核心技術，並於在學期間與夥伴共同完成專案"咖啡豆交易平台網站 Bean-Life"，相信我有能力可以替公司提供相關的服務。</p>
+    <hr/>
+    <div class="block">
+      <h4>Collection</h4>
+      <h2>作品: Bean-Life</h2><a class="product" href="http://52.193.70.107:8081/BA103G4/FrontEnd/" target="_blank">前端頁面</a><a class="product" href="http://52.193.70.107:8081/BA103G4/BackEnd/index.jsp" target="_blank">後端頁面</a>
+      <ul class="data">1.前端頁面
+        <li>測試會員帳號:doctor32 密碼:654321</li>
+        <li>測試店家帳號:dogisbad 密碼:654321</li>
+      </ul>
+      <ul class="data">2.後端頁面
+        <li>測試帳號:M1000000001 密碼:master</li>
+      </ul>
+    </div>
+    <div class="block skill">
+      <h4>Skills</h4>
+      <h2 class="skill_detail">專業技能</h2>
+      <ul>
+        <li>
+          <div class="circle">
+            <div class="outerCircle">
+              <div class="p360"></div>
+            </div>
+            <div class="innerCircle"></div>
+          </div>
+          <h5>前端網頁開發</h5>
+        </li>
+        <li>
+          <div class="circle">
+            <div class="outerCircle">
+              <div class="p360"></div>
+            </div>
+            <div class="innerCircle"></div>
+          </div>
+          <h5>後端網頁開發</h5>
+        </li>
+        <li>
+          <div class="circle">
+            <div class="outerCircle">
+              <div class="p360"></div>
+              <div class="p270"></div>
+            </div>
+            <div class="innerCircle"></div>
+          </div>
+          <h5>Android app開發</h5>
+        </li>
+      </ul>
+    </div>
+    <div class="block pgSkill">
+      <h4>Programming Skill</h4>
+      <h2>程式技能
+        <h3>前端
+          <ul>
+            <li>html/Pug
+              <div class="bar">
+                <div class="value w90"></div>
+              </div>
+            </li>
+            <li>css/Sass
+              <div class="bar">
+                <div class="value w90"></div>
+              </div>
+            </li>
+            <li>javascript
+              <div class="bar">
+                <div class="value w90"></div>
+              </div>
+            </li>
+            <li>jQuery
+              <div class="bar">
+                <div class="value w70"></div>
+              </div>
+            </li>
+            <li>Bootstrap
+              <div class="bar">
+                <div class="value w60"></div>
+              </div>
+            </li>
+          </ul>
+        </h3>
+        <h3>後端
+          <ul>
+            <li>JAVA SE
+              <div class="bar">
+                <div class="value w90"></div>
+              </div>
+            </li>
+            <li>JDBC
+              <div class="bar">
+                <div class="value w70"></div>
+              </div>
+            </li>
+            <li>Servlet
+              <div class="bar">
+                <div class="value w90"></div>
+              </div>
+            </li>
+            <li>Jsp
+              <div class="bar">
+                <div class="value w90"></div>
+              </div>
+            </li>
+            <li>Hibernate
+              <div class="bar">
+                <div class="value w50"></div>
+              </div>
+            </li>
+            <li>spring MVC
+              <div class="bar">
+                <div class="value w50"></div>
+              </div>
+            </li>
+          </ul>
+        </h3>
+        <h3>資料庫
+          <ul>
+            <li>Oracle
+              <div class="bar">
+                <div class="value w70"></div>
+              </div>
+            </li>
+          </ul>
+        </h3>
+      </h2>
+    </div>
+  </div>
+  <div class="right">
+    <div class="decoration"></div>
+    <div class="block experience">
+      <h4>Experience / Works</h4>
+      <h2>經歷與作品</h2>
+      <ul>
+        <li class="item">
+          <div class="count one">經歷一</div>
+          <ul class="itemUl">
+            <li class="time">2009 年 9 月 - 2013 年 6 月</li>
+            <li>國立中正大學(台灣) 機械工程學系(機械工程相關)大學</li>
+          </ul>
+        </li>
+        <li class="item">
+          <div class="count two">經歷二</div>
+          <ul class="itemUl">
+            <li class="time">2015 年 2 月 - 2017 年 5 月</li>
+            <li>元成工業股份有限公司 助理工程師</li>
+          </ul>
+        </li>
+        <li class="item">
+          <div class="count three">經歷三</div>
+          <ul class="itemUl">
+            <li class="time">2017 年 5 月 - 至今</li>
+            <li>資策會數位教育研究所中壢中心(台灣) JAVA雲端服務開發技術養成班 (資訊工程相關)大學</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="block">
+      <h4>Autobiography</h4>
+      <h2>自傳</h2>
+      <ul>
+        <li> 
+          <p>我是陳智遠，曾在資策會數位教育研究所，JAVA雲端服務技術養成班參加訓練，已掌握JAVA相關核心技術，並於在學期間與夥伴共同完成專案"咖啡豆交易平台網站 Bean-Life"。</p>
+          <p>個人曾在元成工業擔任過助理工程師，就業期間學會如何與人合作，和公司同仁及外部廠商溝通以利專案進行，以及時間規劃，在時限內完成份內的工作，並對產品進行品質管理，確保客戶得到的產品擁有高品質。</p>
+          <p>就學期間對程式已萌發相關興趣，就業後曾利用下班剩餘時間在網路上粗淺的學習相關技術，了解自己是否真正喜歡寫程式，之後下定決心後，決定報名資策會中壢中心JAVA班，期望能接觸更多相關技術並進入相關產業工作，報名後學到前端、後端、資料庫等技術，雖然技術繁多，但在資策會有系統的學習，已經確實掌握相關技術。</p>
+          <p>在資策會中，與夥伴共同完成專案"咖啡豆交易平台網站 Bean-Life"，這個網站可讓使用者依咖啡豆烘焙條件、產地等條件找到他想要的咖啡豆，並可以參加咖啡活動及使用獲得的積分進行積分兌換;我負責的部分是網站後端及前端活動和贈品頁面，藉由實際設計相關商業邏輯，使用MVC架構開發，學習到如何在model中使用JAVA-BEAN包裝資料、重複使用，並使用連線池技術與資料庫溝通 ; 學習到如何在Controller中使用大量的if區塊來撰寫相關功能，使用model與資料庫溝通 ; 學習到如何View展示層使用jsp呈現網頁畫面，處理相關前端問題。</p>
+          <p>藉由半年有系統性的學習，及專題中不斷地遇到問題，不斷的解決，已經奠定深厚的基礎，我是一個肯做肯學的人，對自己的工作一定會盡全力去完成，若未來有機會進入貴公司，我將不斷精進自己的專業知識，並會向同事、主管請益，懇請給予面試機會。</p>
+        </li>
+      </ul>
+    </div>
+    <div class="thank">謝謝您的閱讀!</div>
+    <div class="face">
+      <div class="hair hairTop"></div>
+      <div class="hair hairLeft"></div>
+      <div class="hair hairRight"></div>
+      <div class="eye eyeLeft">
+        <div class="eyeball"></div>
+      </div>
+      <div class="eye eyeRight">
+        <div class="eyeball"></div>
+      </div>
+      <div class="mouth">
+        <div class="innerObject"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pageLoading">
+  <div class="face fadeOut">
+    <div class="hair hairTop"></div>
+    <div class="hair hairLeft"></div>
+    <div class="hair hairRight"></div>
+    <div class="eye eyeLeft">
+      <div class="eyeball"></div>
+    </div>
+    <div class="eye eyeRight">
+      <div class="eyeball"></div>
+    </div>
+    <div class="mouth"></div>
+  </div>
+  <div class="loading">
+    <div class="loadingBar"></div>
+  </div>
+</div>
 </html>
-dsd
