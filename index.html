@@ -6,6 +6,111 @@
   </head>
   <body>
     <h1>這是一個測試網頁。</h1>
+    
+body{
+  position:relative;
+  width:100;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  perspective:10000px;
+  background:#222;
+  .wrap{
+    width:30px;
+    height:2300px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform-style:preserve-3d;
+    transform:translateX(-50%) translateY(-50%);
+    @for $i from 1 through 20{
+      &:nth-of-type(#{$i}){
+        width:calc(300px - #{$i * 20}px);
+        height:calc(300px - #{$i * 20}px);
+        .cube{
+          animation:cubespin 10s ease-in-out infinite;
+          animation-delay:#{$i / -10}s;
+          @keyframes cubespin{
+            0%{
+              transform:rotateX(25deg) rotateY(25deg);
+            }
+            50%{
+              transform:rotateX(25deg) rotateY(25deg);
+            }
+            100%{
+              transform:rotateX(205deg) rotateY(-205deg);
+            }
+          }
+          .face{
+            width:calc(300px - #{$i * 20}px);
+            height:calc(300px - #{$i * 20}px);
+            box-shadow:inset 0 0 2px 2px adjust-hue(pink, ($i/20)*360);
+            &:nth-of-type(1){ 
+            //front
+            transform: rotateY(   0deg ) translateZ( calc(150px - #{$i * 5}px) );
+            }
+          &:nth-of-type(2){ 
+            //back
+            transform: rotateX( 180deg ) translateZ( calc(150px - #{$i * 5}px) ); }
+          &:nth-of-type(3){ 
+            //right
+            transform: rotateY(  90deg ) translateZ( calc(150px - #{$i * 5}px) ); }
+          &:nth-of-type(4){ 
+            //left
+            transform: rotateY( -90deg ) translateZ( calc(150px - #{$i * 5}px) ); }
+          &:nth-of-type(5){ 
+            //top
+            transform: rotateX(  90deg ) translateZ( calc(150px - #{$i * 5}px) ); }
+          &:nth-of-type(6){ 
+            //bottom
+            transform: rotateX( -90deg ) translateZ( calc(150px - #{$i * 5}px) ); }
+    
+            
+          }
+        }
+      }
+    }
+    .cube {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+
+      .face{
+          margin: 0;
+          width: 200px;
+          height: 200px;
+          display: block;
+          position: absolute;
+          &:nth-of-type(1){ 
+            //front
+            transform: rotateY(   0deg ) translateZ( 100px );
+            }
+          &:nth-of-type(2){ 
+            //back
+            transform: rotateX( 180deg ) translateZ( 100px ); }
+          &:nth-of-type(3){ 
+            //right
+            transform: rotateY(  90deg ) translateZ( 100px ); }
+          &:nth-of-type(4){ 
+            //left
+            transform: rotateY( -90deg ) translateZ( 100px ); }
+          &:nth-of-type(5){ 
+            //top
+            transform: rotateX(  90deg ) translateZ( 100px ); }
+          &:nth-of-type(6){ 
+            //bottom
+            transform: rotateX( -90deg ) translateZ( 100px ); }
+      }
+    }
+  
+  }
+  
+  
+}
+
+
   </body>
 </html>
 dsd
