@@ -1,0 +1,121 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #36506C;
+}
+
+.space {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #8ea9c7;
+  filter: blur(50px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.moon {
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -15px -15px #e6e6e6 inset, 0px 0px 40px rgba(0, 0, 0, 0.7);
+}
+
+.hole {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  box-shadow: 5px 5px #b3b3b3 inset;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.hole:nth-child(1) {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  left: 50px;
+  top: 60px;
+}
+.hole:nth-child(2) {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  left: 140px;
+  top: 135px;
+}
+.hole:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  left: 140px;
+  top: 90px;
+}
+.hole:nth-child(4) {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 100px;
+  top: 150px;
+}
+
+.red {
+  background-color: #f24;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -2px -2px #d50021 inset, 0px 0px 10px rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.yellow {
+  background-color: #fe3;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -5px -5px #e6d200 inset, 0px 0px 10px rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.trace1 {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: dashed 1px white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+
+.trace2 {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: dashed 1px white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
