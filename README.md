@@ -1,121 +1,63 @@
-<p align="center">
-  <a href="https://anuraghazra.github.io/">
-    <img alt="Gatsby" src="./src/static/logo_noalpha.svg" width="100" />
-    <h2 align="center">Anurag Hazra</h2>
-  </a>
-</p> 
-<p align="center">Creative FrontEnd Web Developer</p>
+[Hux Blog](https://huangxuan.me)
+================================
 
-[![Build Status](https://travis-ci.org/anuraghazra/anuraghazra.github.io.svg?branch=develop)](https://travis-ci.org/anuraghazra/anuraghazra.github.io)
-![GitHub](https://img.shields.io/github/license/anuraghazra/anuraghazra.github.io)
-![Website](https://img.shields.io/website?down_message=offline&label=site&up_message=online&url=http%3A%2F%2Fanuraghazra.github.io)
+> I never expect this becomes popular.
+
+![](http://huangxuan.me/img/blog-desktop.jpg)
 
 
-![Anurag Hazra Site Preview](./src/static/screenshot.png)
+[User Manual 👉](_doc/Manual.md)
+--------------------------------------------------
 
-Strained eyes? There's DarkMode too :p
+### Getting Started
 
-*NOTE: If you are using this site as a template for your own portfolio site, I would be very glad if you add a link to the original site with my name in footer*
+1. You will need [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/). Following [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to fullfill the enviromental requirement.
 
-## :rocket: Quick start
+2. Installed dependencies in the `Gemfile`:
 
-**Run the site locally**
-
-_NOTE: The default branch for this repo is `develop`, when you push or pull make sure you specify the correct branch_
-
-### Step 1: Clone The Repo
-
-Fork the repository. then clone the repo locally by doing -
-
-```bash
-git clone https://github.com/anuraghazra/anuraghazra.github.io.git
+```sh
+$ bundle install 
 ```
 
-### Step 2: Install Dependencies
+3. Serve the website (`localhost:4000` by default):
 
-cd into the directory
-
-```bash
-cd anuraghazra.github.io
+```sh
+$ bundle exec jekyll serve  # alternatively, npm start
 ```
 
-install all the dependencies
-```bash
-npm install
-```
+### Development (Build From Source)
 
-### Step 3: Start Development Server
+To modify the theme, you will need [Grunt](https://gruntjs.com/). There are numbers of tasks you can find in the `Gruntfile.js`, includes minifing JavaScript, compiling `.less` to `.css`, adding banners to keep the Apache 2.0 license intact, watching for changes, etc. 
 
-Then start the development Server
-```
-npm run develop
-```
-After running the development server the site should be running on https://localhost:8000
+Yes, they were inherited and are extremely old-fashioned. There is no modularization and transpilation, etc.
+
+Critical Jekyll-related code are located in `_include/` and `_layouts/`. Most of them are [Liquid](https://github.com/Shopify/liquid/wiki) templates.
+
+This theme uses the default code syntax highlighter of jekyll, [Rouge](http://rouge.jneen.net/), which is compatible with Pygments theme so just pick any pygments theme css (e.g. from [here](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html) and replace the content of `highlight.less`.
 
 
-## :open_file_folder: What's inside?
-
-A quick look at the folder structure of this project.
-
-    .
-    ├── content
-    │   ├───blog
-    │   ├───case-studies
-    │   └───json
-    ├── cypress
-    ├── plugins
-    └── src
-        ├───components
-        │   ├───About
-        │   ├───Blog
-        │   ├───common
-        │   ├───Concepts
-        │   ├───Contact
-        │   ├───CreativeCoding
-        │   ├───Home
-        │   ├───Layout
-        │   │   └───Navbar
-        │   ├───Lightbox
-        │   ├───Projects
-        │   └───Skills
-        ├───hooks
-        ├───pages
-        ├───static
-        │   └───images
-        ├───styles
-        └───templates
+### Interesting to know more? Checkout the [full user manual](_doc/Manual.md)!
 
 
-## Tools Used
+Other Resources
+---------------
 
-1. Gatsby.js (of course)
-2. Styled Components for styling
-3. Cypress for E2E Testing
-4. Jest for Unit Testing
-5. TravisCI for CI/CD
+Ports
+- [**Hexo**](https://github.com/Kaijun/hexo-theme-huxblog) by @kaijun
+- [**React-SSR**](https://github.com/LucasIcarus/huxpro.github.io/tree/ssr) by @LucasIcarus
 
-## :v: Contributing
+[Starter/Boilerplate](https://github.com/huxpro/huxblog-boilerplate)
+- Out of date. Helps wanted for updating it on par with the main repo
 
-*NOTE: if you want to change the [blog content](./content) or fix any typo you can do that from github's ui without cloning the repo locally*
+Translation
+- [🇨🇳  中文文档（有点过时）](https://github.com/Huxpro/huxpro.github.io/blob/master/_doc/README.zh.md)
 
-After cloning & setting up the local project you can push the changes to your github fork and make a pull request.
 
-> You can also run the tests locally to see if everything works fine with
+License
+-------
 
-### Running tests
-```bash
-npm run test
-npm run test:e2e
-```
+Apache License 2.0.
+Copyright (c) 2015-present Huxpro
 
-### Pushing the changes
-
-```bash
-git add .
-git commit -m "commit message"
-git push YOUR_REPO_URL develop
-```
-
-------
-
-Made with :heart: and Gatsbyjs
+Hux Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
+Copyright (c) 2013-2016 Blackrock Digital LLC.
